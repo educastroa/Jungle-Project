@@ -9,7 +9,7 @@
   <div>
         <% if product.quantity == 0 %>
           <div>
-          <button type="button" class="soldout">Sold out</button>
+          <span  class="soldout">Sold out</span>
           </div>
           <% else %>
           <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
