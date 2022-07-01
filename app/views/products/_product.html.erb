@@ -9,13 +9,15 @@
   <div>
         <% if product.quantity == 0 %>
           <div>
-          <span  class="soldout">Sold out</span>
+            <span  class="soldout">Sold out</span>
           </div>
-          <% else %>
-          <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
-          method: :post do %>
-          <%= fa_icon "shopping-cart", text: 'Add' %> 
-          <% end %>
+        <% else %>
+          <div>
+            <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
+            method: :post do %>
+            <%= fa_icon "shopping-cart", text: 'Add' %> 
+            <% end %>
+          </div>
         <% end %>
   </div>
 </article>
