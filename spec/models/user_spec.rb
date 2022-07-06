@@ -45,6 +45,8 @@ RSpec.describe User, type: :model do
     expect(@user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
   end
+
+  
   describe '.authenticate_with_credentials' do
     it 'should log the user in if the credentials are correct' do
       @user = User.new(first_name: "test", last_name: "test1", email: "test123@gmail.com", password: "ABCDEF", password_confirmation: "ABCDEF")
